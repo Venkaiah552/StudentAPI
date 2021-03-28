@@ -1,0 +1,36 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        ddl-auto: create
+    show-sql: true
+  hibernate:
+    naming:
+      implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+  h2:
+    console:
+      enabled: true
+
+
+  error:
+    whitelabel:
+      enabled: false
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
