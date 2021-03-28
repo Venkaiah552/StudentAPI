@@ -1,6 +1,6 @@
 # StudentAPI
 
-This is Simple API to issurate one to one mapping 
+This is Simple API to illustrate one to one mapping 
 
 Once we start the app, it will automatically create table schema based on Entity classes.
 
